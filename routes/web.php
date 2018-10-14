@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PasswordController@index');
+Route::get('/get-password', 'PasswordController@getPassword');
