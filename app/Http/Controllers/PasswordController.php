@@ -8,11 +8,11 @@ class PasswordController extends Controller
 {
     public function index()
     {
-        return 'Show the form';
+        return view('password.index');
     }
 
     public function getPassword()
     {
-        return 'Show the password based on selected options';
+        return view('password.getPassword');
     }
 }
