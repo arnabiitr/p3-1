@@ -19,7 +19,7 @@
                                 <input class='form-control'
                                        type='number'
                                        name='lengthOfPassword'
-                                       value='{{ old('lengthOfPassword') }}'>
+                                       value='{{ old('lengthOfPassword', $lengthOfPassword) }}'>
                             </div>
                         </div>
                         <div class='field'>
@@ -27,15 +27,15 @@
                             <div class='col-sm-3'>
                                 <select class='form-control' name='includeSpecialChar'>
                                     <option value='choose'>Choose one...</option>
-                                    <option value='~' @if( old('includeSpecialChar') == '~') {{ 'selected' }} @endif>~</option>
-                                    <option value='!' @if( old('includeSpecialChar') == '!') {{ 'selected' }} @endif>!</option>
-                                    <option value='@' @if( old('includeSpecialChar') == '@') {{ 'selected' }} @endif>@</option>
-                                    <option value='#' @if( old('includeSpecialChar') == '#') {{ 'selected' }} @endif>#</option>
-                                    <option value='$' @if( old('includeSpecialChar') == '$') {{ 'selected' }} @endif>$</option>
-                                    <option value='%' @if( old('includeSpecialChar') == '%') {{ 'selected' }} @endif>%</option>
-                                    <option value='^' @if( old('includeSpecialChar') == '^') {{ 'selected' }} @endif>^</option>
-                                    <option value='&' @if( old('includeSpecialChar') == '&') {{ 'selected' }} @endif>&</option>
-                                    <option value='*' @if( old('includeSpecialChar') == '*') {{ 'selected' }} @endif>*</option>
+                                    <option value='~' @if( old('includeSpecialChar', $includeSpecialChar) == '~') {{ 'selected' }} @endif>~</option>
+                                    <option value='!' @if( old('includeSpecialChar', $includeSpecialChar) == '!') {{ 'selected' }} @endif>!</option>
+                                    <option value='@' @if( old('includeSpecialChar', $includeSpecialChar) == '@') {{ 'selected' }} @endif>@</option>
+                                    <option value='#' @if( old('includeSpecialChar', $includeSpecialChar) == '#') {{ 'selected' }} @endif>#</option>
+                                    <option value='$' @if( old('includeSpecialChar', $includeSpecialChar) == '$') {{ 'selected' }} @endif>$</option>
+                                    <option value='%' @if( old('includeSpecialChar', $includeSpecialChar) == '%') {{ 'selected' }} @endif>%</option>
+                                    <option value='^' @if( old('includeSpecialChar', $includeSpecialChar) == '^') {{ 'selected' }} @endif>^</option>
+                                    <option value='&' @if( old('includeSpecialChar', $includeSpecialChar) == '&') {{ 'selected' }} @endif>&</option>
+                                    <option value='*' @if( old('includeSpecialChar', $includeSpecialChar) == '*') {{ 'selected' }} @endif>*</option>
                                 </select>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                         <label class='col-sm-6 control-label'>Include a number</label>
                         <div class='col-sm-1'>
                             <input class='form-control' type='checkbox'
-                                   name='includeNumber' {{ old('includeNumber') ? 'checked' : '' }} >
+                                   name='includeNumber' {{ old('includeNumber', $includeNumber) ? 'checked' : '' }} >
                         </div>
                     </fieldset>
                     <input type='submit' value='Generate password' class='btn btn-primary formButton'>

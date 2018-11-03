@@ -14,17 +14,17 @@ class PasswordController extends Controller
             'includeSpecialChar' => $request->session()->get('includeSpecialChar', 'choose'),
             'password' => $request->session()->get('password')
         ]);
-
-        return view('password.index');
     }
 
     public function getPassword(Request $request)
     {
+        # input validation
         $request->validate([
             'lengthOfPassword' => 'required|integer|min:3',
             'includeSpecialChar' => 'required'
         ]);
 
+        # variable to store generated password
         $password = "";
 
         # Getting data
@@ -32,6 +32,7 @@ class PasswordController extends Controller
         $includeNumber = $request->has('includeNumber');
         $lengthOfPassword = $request->input('lengthOfPassword');
 
+        # Generating random password
         $charList = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
             'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
@@ -50,6 +51,7 @@ class PasswordController extends Controller
             }
         }
 
+        # redirecting to index page with all inputs
         return redirect('/')->with([
             'lengthOfPassword' => $lengthOfPassword,
             'includeNumber' => $includeNumber,
