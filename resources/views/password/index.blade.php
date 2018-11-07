@@ -27,15 +27,15 @@
                             <div class='col-sm-3'>
                                 <select class='form-control' name='includeSpecialChar'>
                                     <option value='choose'>Choose one...</option>
-                                    <option value='~' @if( old('includeSpecialChar', $includeSpecialChar) == '~') {{ 'selected' }} @endif>~</option>
-                                    <option value='!' @if( old('includeSpecialChar', $includeSpecialChar) == '!') {{ 'selected' }} @endif>!</option>
-                                    <option value='@' @if( old('includeSpecialChar', $includeSpecialChar) == '@') {{ 'selected' }} @endif>@</option>
-                                    <option value='#' @if( old('includeSpecialChar', $includeSpecialChar) == '#') {{ 'selected' }} @endif>#</option>
-                                    <option value='$' @if( old('includeSpecialChar', $includeSpecialChar) == '$') {{ 'selected' }} @endif>$</option>
-                                    <option value='%' @if( old('includeSpecialChar', $includeSpecialChar) == '%') {{ 'selected' }} @endif>%</option>
-                                    <option value='^' @if( old('includeSpecialChar', $includeSpecialChar) == '^') {{ 'selected' }} @endif>^</option>
-                                    <option value='&' @if( old('includeSpecialChar', $includeSpecialChar) == '&') {{ 'selected' }} @endif>&</option>
-                                    <option value='*' @if( old('includeSpecialChar', $includeSpecialChar) == '*') {{ 'selected' }} @endif>*</option>
+                                    <option value='~' {{ (old('includeSpecialChar', $includeSpecialChar) == '~') ? 'selected' : ''}}>~</option>
+                                    <option value='!' {{ (old('includeSpecialChar', $includeSpecialChar) == '!') ? 'selected' : ''}}>!</option>
+                                    <option value='@' {{ (old('includeSpecialChar', $includeSpecialChar) == '@') ? 'selected' : ''}}>@</option>
+                                    <option value='#' {{ (old('includeSpecialChar', $includeSpecialChar) == '#') ? 'selected' : ''}}>#</option>
+                                    <option value='$' {{ (old('includeSpecialChar', $includeSpecialChar) == '$') ? 'selected' : ''}}>$</option>
+                                    <option value='%' {{ (old('includeSpecialChar', $includeSpecialChar) == '%') ? 'selected' : ''}}>%</option>
+                                    <option value='^' {{ (old('includeSpecialChar', $includeSpecialChar) == '^') ? 'selected' : ''}}>^</option>
+                                    <option value='&' {{ (old('includeSpecialChar', $includeSpecialChar) == '&') ? 'selected' : ''}}>&</option>
+                                    <option value='*' {{ (old('includeSpecialChar', $includeSpecialChar) == '*') ? 'selected' : ''}}>*</option>
                                 </select>
                             </div>
                         </div>
