@@ -27,57 +27,57 @@
 
 ## 2. Functional testing
 
-** Test 1 - Submitting empty form**
-+ Description: Submit form without specifying any field
+**Test 1 - Submitting empty form**
++ Description: Submit form without specifying any field or without specifying some fields.
 + Outcome: It shows the errors which is expected but all the field values were removed and user gets empty form again which is unexpected.
 
-** Test 2 - Entering wrong child name**
-+ Description: Submit form with child name having numbers
+**Test 2 - Entering wrong child name**
++ Description: Submit form with child name having numbers.
 + Outcome: It shows the errors which is expected.
 
-** Test 3 - Entering wrong college cost**
-+ Description: Submit form with negative college cost
+**Test 3 - Entering wrong college cost**
++ Description: Submit form with negative college cost.
 + Outcome: It shows the errors which is expected.
 
-** Test 4 - Entering wrong years**
-+ Description: Submit form with negative years
+**Test 4 - Entering wrong years**
++ Description: Submit form with negative years.
 + Outcome: It shows the errors which is expected.
 
-** Test 5 - Not entering inflation rate**
-+ Description: Submit form without choosing inflation rate
+**Test 5 - Not entering inflation rate**
++ Description: Submit form without choosing inflation rate.
 + Outcome: It shows the error 500 which is not expected. It should show user error that valid inflation rate is not selected.
 
-** Test 6 - Entering everything valid**
-+ Description: Submit form with all required inputs in their limits
+**Test 6 - Entering everything valid**
++ Description: Submit form with all required inputs in their limits.
 + Outcome: It shows the outcome which is expected but all field values are erased and user gets empty form again which is unexpected.
 
-** Test 7 - Entering non numeric values**
-+ Description: Submit form with non numeric values for cost or years
-+ Outcome: HTML invalidates this which is expected
+**Test 7 - Entering non numeric values**
++ Description: Submit form with non numeric values for cost or years.
++ Outcome: HTML invalidates this which is expected.
 
-** Test 8 - Random URLS**
-+ Description: Trying to access random urls
-+ Outcome: Getting 404 error which is expected
+**Test 8 - Random URLS**
++ Description: Trying to access random urls.
++ Outcome: Getting 404 error which is expected.
 
 ## 3. Code: Routes
  
-+ GET routes are used appropriately
-+ I tried to access /about and /contact routes but could not see anything in webpage
++ GET routes are used appropriately.
++ I tried to access /about and /contact routes but could not see anything in webpage. Not sure what is expected as nothing is mentioned in readme.md but routes exists.
 
 ## 4. Code: Views
 
-+ Yes template inheritance is used properly
-+ There is no separation of concern issues in view files
-+ Very clean blade code
++ Yes template inheritance is used properly.
++ There is no separation of concern issues in view files.
++ Very clean blade code.
 
 ## 5. Code: General
 
-+ Code is well commented and clean
-+ Code is compliant with the standard adopted in the course
++ Code is well commented and clean.
++ Code is compliant with the standard adopted in the course.
 + Entering the inflation rate option in for loop is interesting, I would not have thought it like it.
 + readme.md file is not following the guid lines as described in project 3 description. It does not specify what are the 3 unique form inputs.
 
 ## 6. Misc
 
 + Project 3 requirement says there should be 3 unique form inputs but this project is using only 2.
-+ There are 12 errors on NuHtml checker so w3 validator produced 12 issues with site url
++ There are 12 errors on NuHtml checker so w3 validator produced 12 issues with site url.
